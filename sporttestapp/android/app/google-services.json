@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "407625346174",
+    "project_id": "sporttest-project",
+    "storage_bucket": "sporttest-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407625346174:android:da5d1d77948e6146c53c2f",
+        "android_client_info": {
+          "package_name": "vigneshcs.com.sporttest.sporttestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407625346174-pm3ot70s42uk45giii1tdcevh8apg4bg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSEHImeFE_-e2fXFo6U9sm99ywibZ8xqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407625346174-pm3ot70s42uk45giii1tdcevh8apg4bg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
