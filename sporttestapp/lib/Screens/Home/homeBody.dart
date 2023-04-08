@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:sporttestapp/Constants/constant.dart';
+import 'package:sporttestapp/Screens/Login/login.dart';
 import 'package:sporttestapp/Screens/Results/search.dart';
 import 'package:sporttestapp/Screens/Stations/balancieren.dart';
 import 'package:sporttestapp/Screens/Stations/lauf.dart';
@@ -30,13 +31,13 @@ class _HomeBodyState extends State<HomeBody> {
             content: const Text('Möchten Sie eine App beenden?'),
             actions: <Widget>[
               TextButton(
-                onPressed: () =>
-                    Navigator.of(context).pop(false), //<-- SEE HERE
+                onPressed: () => Navigator.of(context).pop(false),
                 child: const Text('Nein'),
               ),
               TextButton(
-                onPressed: () => Navigator.popUntil(
-                    context, (route) => route.isFirst), // <-- SEE HERE
+                onPressed: () => Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    (Route route) => false),
                 child: const Text('Ja'),
               ),
             ],
@@ -77,8 +78,6 @@ class _HomeBodyState extends State<HomeBody> {
             IconButton(
               onPressed: () {
                 Navigator.popUntil(context, (route) => route.isFirst);
-                /*Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));*/
               },
               icon: const Icon(Icons.logout_sharp),
             ),
@@ -97,24 +96,6 @@ class _HomeBodyState extends State<HomeBody> {
                     ),
                     imageWidget('assets/images/stadtSportLogo.png'),
                   ]),
-                  /*ElevatedButton.icon(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const OtherDetails()));
-                    },
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(secondaryColor),
-                    ),
-                    icon: const Icon(Icons.add),
-                    label: const Text(
-                      'Erziehungsberechtigen',
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.normal),
-                    ),
-                  ),*/
                   const SizedBox(
                     height: 50,
                   ),

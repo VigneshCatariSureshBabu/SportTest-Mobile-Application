@@ -12,10 +12,8 @@ class Standweitsprung extends StatefulWidget {
 }
 
 class _StandweitsprungState extends State<Standweitsprung> {
-  /*StationDetails staion03 = new StationDetails(0, 0, 0);*/
   double result = 0.0;
   final db = FirebaseFirestore.instance;
-
   final TextEditingController _studentId = TextEditingController();
   final TextEditingController _durchgana01 = TextEditingController();
   final TextEditingController _durchgana02 = TextEditingController();
@@ -101,22 +99,16 @@ class _StandweitsprungState extends State<Standweitsprung> {
                         MaterialButton(
                           color: primaryColor,
                           onPressed: () async {
-                            /*staion03.durchgang01 =
-                                  double.parse(_durchgana01.text);
-                              staion03.durchgang02 =
-                                  double.parse(_durchgana02.text);*/
                             if (double.parse(_durchgana01.text) >
                                 double.parse(_durchgana02.text)) {
                               result = double.parse(_durchgana01.text);
                             } else {
                               result = double.parse(_durchgana02.text);
                             }
-
                             await db
                                 .collection('stationreport')
                                 .doc(_studentId.text)
                                 .update({'standweitsprung': result});
-                            /*.set(staion03.toJson());*/
                             // ignore: use_build_context_synchronously
                             Navigator.pop(
                                 context,

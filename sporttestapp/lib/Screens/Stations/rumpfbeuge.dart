@@ -16,9 +16,7 @@ class Rumpfbeuge extends StatefulWidget {
 
 class _RumpfbeugeState extends State<Rumpfbeuge> {
   StationReport station = StationReport(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-  /*StationDetails staion01 = new StationDetails(0, 0, 0);*/
   final db = FirebaseFirestore.instance;
-
   final TextEditingController _studentId = TextEditingController();
   final TextEditingController _durchgana01 = TextEditingController();
   final TextEditingController _durchgana02 = TextEditingController();
@@ -130,11 +128,6 @@ class _RumpfbeugeState extends State<Rumpfbeuge> {
                         MaterialButton(
                           color: primaryColor,
                           onPressed: () async {
-                            /*staion01.durchgang01 =
-                                  double.parse(_durchgana01.text);
-                              staion01.durchgang02 =
-                                  double.parse(_durchgana02.text);
-                                  */
                             if (double.parse(_durchgana01.text) <
                                 double.parse(_durchgana02.text)) {
                               station.rumpfbeuge =

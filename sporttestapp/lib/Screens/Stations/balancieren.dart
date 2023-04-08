@@ -14,7 +14,6 @@ class Balancieren extends StatefulWidget {
 }
 
 class _BalancierenState extends State<Balancieren> {
-  /*StationDetails7 staion07 = new StationDetails7(0, 0, 0, 0, 0, 0);*/
   late int result1, result2, result3;
   final db = FirebaseFirestore.instance;
   double slideValue = 0.0;
@@ -299,7 +298,6 @@ class _BalancierenState extends State<Balancieren> {
                               'balancierenRueckwaerts':
                                   result1 + result2 + result3
                             });
-                            /*.set(staion07.toJson());*/
                             Navigator.pop(
                                 context,
                                 MaterialPageRoute(

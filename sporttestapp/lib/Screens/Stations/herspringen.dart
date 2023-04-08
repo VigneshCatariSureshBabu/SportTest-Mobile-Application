@@ -14,7 +14,6 @@ class SeitlichesHerspringen extends StatefulWidget {
 }
 
 class _SeitlichesHerspringenState extends State<SeitlichesHerspringen> {
-  /*StationDetails6 staion06 = new StationDetails6(0, 0);*/
   double result = 0.0;
   final db = FirebaseFirestore.instance;
 

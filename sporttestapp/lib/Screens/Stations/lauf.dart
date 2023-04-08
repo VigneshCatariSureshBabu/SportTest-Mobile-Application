@@ -14,7 +14,6 @@ class Lauf extends StatefulWidget {
 }
 
 class _LaufState extends State<Lauf> {
-  /*StationDetails8 staion08 = new StationDetails8(0, 0);*/
   final db = FirebaseFirestore.instance;
   int result = 0;
   final TextEditingController _studentId = TextEditingController();
@@ -108,7 +107,6 @@ class _LaufState extends State<Lauf> {
                                 .collection('stationreport')
                                 .doc(_studentId.text)
                                 .update({'lauf': result});
-                            /*.set(staion08.toJson());*/
                             Navigator.pop(
                                 context,
                                 MaterialPageRoute(

@@ -14,10 +14,8 @@ class Sprint extends StatefulWidget {
 }
 
 class _SprintState extends State<Sprint> {
-  /*StationDetails staion02 = new StationDetails(0, 0, 0);*/
   double result = 0.0;
   final db = FirebaseFirestore.instance;
-
   final TextEditingController _studentId = TextEditingController();
   final TextEditingController _durchgana01 = TextEditingController();
   final TextEditingController _durchgana02 = TextEditingController();
@@ -119,22 +117,16 @@ class _SprintState extends State<Sprint> {
                         MaterialButton(
                           color: primaryColor,
                           onPressed: () async {
-                            /*staion02.durchgang01 =
-                                  double.parse(_durchgana01.text);
-                              staion02.durchgang02 =
-                                  double.parse(_durchgana02.text);*/
                             if (double.parse(_durchgana01.text) <
                                 double.parse(_durchgana02.text)) {
                               result = double.parse(_durchgana01.text);
                             } else {
                               result = double.parse(_durchgana02.text);
                             }
-
                             await db
                                 .collection('stationreport')
                                 .doc(_studentId.text)
                                 .update({'sprint': result});
-                            /*.set(staion02.toJson());*/
                             Navigator.pop(
                                 context,
                                 MaterialPageRoute(

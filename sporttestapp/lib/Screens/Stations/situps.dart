@@ -12,9 +12,7 @@ class SitUps extends StatefulWidget {
 }
 
 class _SitUpsState extends State<SitUps> {
-  /*StationDetails45 staion04 = new StationDetails45(0);*/
   final db = FirebaseFirestore.instance;
-
   final TextEditingController _studentId = TextEditingController();
   final TextEditingController _anzahl = TextEditingController();
   @override
@@ -99,7 +97,6 @@ class _SitUpsState extends State<SitUps> {
                                 .collection('stationreport')
                                 .doc(_studentId.text)
                                 .update({'situps': int.parse(_anzahl.text)});
-                            /*.set(staion04.toJson());*/
                             // ignore: use_build_context_synchronously
                             Navigator.pop(
                                 context,

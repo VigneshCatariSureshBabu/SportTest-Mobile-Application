@@ -14,9 +14,7 @@ class Liegestuetz extends StatefulWidget {
 }
 
 class _LiegestuetzState extends State<Liegestuetz> {
-  /*StationDetails45 staion05 = new StationDetails45(0);*/
   final db = FirebaseFirestore.instance;
-
   final TextEditingController _studentId = TextEditingController();
   final TextEditingController _anzahl = TextEditingController();
   @override

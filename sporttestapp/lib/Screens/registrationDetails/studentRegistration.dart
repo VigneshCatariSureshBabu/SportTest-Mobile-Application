@@ -109,8 +109,6 @@ class _StudentRegistrationState extends State<StudentRegistration> {
                             setState(() => selectedGender = gender!),
                       ),
                     ),
-                    /*
-                textWidgetWithoutIcon(_gender, 'Enter your Gender', false),*/
                     const SizedBox(
                       height: 20,
                     ),
